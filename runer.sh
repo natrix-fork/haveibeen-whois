@@ -1,2 +1,2 @@
 #!/bin/sh
-whois $1 > emails.txt && python grabclean.py | python pwnedornot.py -f emails.txt
+rm -f *.txt && whois $1 > emails.txt && python grabclean.py | cat mailout.txt | python pwnedornot.py -f out.txt >cat results.txt
